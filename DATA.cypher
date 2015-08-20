@@ -12,7 +12,7 @@ CREATE (m0)-[:USES]->(s0)
 
 CREATE (s:SONG {name:"All Along the Watchtower", pubDate:"1967-11-22"})-[:IS_ON {trachNo:15}]->(a:ALBUM {name:"Electric Ladyland", pubDate:"1986-10-16"})
 CREATE (a) -[:CONTAINS]->(s)	
-CREATE (a) -[:IS_FROM]->(b0:BAND {title:"The Jimi Hendrix Experience" })
+CREATE (a) -[:IS_FROM]->(b0:BAND {name:"The Jimi Hendrix Experience" })
 CREATE (s) -[:USED_IN]->(m1:MOVIE {title:"Within and I", year:"1988"})
 CREATE (m1) -[:USES]->(s)
 CREATE (s) -[:USED_IN]->(m2:MOVIE {title:"Land of the Lost", germanTitle:"Die fast vergessene Welt", year:"2009"})

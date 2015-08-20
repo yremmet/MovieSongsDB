@@ -1,49 +1,45 @@
-// DELETE EVERYTHING
-MATCH (del_n)
-OPTIONAL MATCH (del_n)-[del_r]-()
-DELETE del_n,del_r
+CREATE CONSTRAINT ON (b:BAND) ASSERT b.id IS UNIQUE;
+CREATE CONSTRAINT ON (a:ALBUM) ASSERT a.id IS UNIQUE;
+CREATE CONSTRAINT ON (s:SONG) ASSERT s.id IS UNIQUE;
 
-// CREATE DATA
-CREATE (s0:SONG {name:"Somebody to Love", pubDate:"1966-04-01"}) -[:IS_ON]->(a0:ALBUM {name:"Surrealistic Pillow", pubDate:"1967-02-01"})
-CREATE (a0) -[:CONTAINS]->(s0)
-CREATE (a0) -[:IS_FROM]->(b0:BAND {name:"Jefferson-Airplane"})
-CREATE (s0)-[:USED_IN]->(m0:MOVIE {title:"Fear and Loathing in Las Vegas", year:"1998"})
-CREATE (m0)-[:USES]->(s0)
+// Check CSV
+LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/songs.csv" AS line WITH line
+RETURN line
+LIMIT 1;
 
-CREATE (s:SONG {name:"All Along the Watchtower", pubDate:"1967-11-22"})-[:IS_ON {trachNo:15}]->(a:ALBUM {name:"Electric Ladyland", pubDate:"1986-10-16"})
-CREATE (a) -[:CONTAINS]->(s)	
-CREATE (a) -[:IS_FROM]->(b0:BAND {title:"The Jimi Hendrix Experience" })
-CREATE (s) -[:USED_IN]->(m1:MOVIE {title:"Within and I", year:"1988"})
-CREATE (m1) -[:USES]->(s)
-CREATE (s) -[:USED_IN]->(m2:MOVIE {title:"Land of the Lost", germanTitle:"Die fast vergessene Welt", year:"2009"})
-CREATE (m2) -[:USES]->(s)
-CREATE (s) -[:USED_IN]->(m3:MOVIE {title:"Watchman", year:"2009"})
-CREATE (m3) -[:USES]->(s)
-CREATE (s) -[:USED_IN]->(m4:MOVIE {title:"Look Who's Talking", germanTitle:"Kuck mal, wer da spricht!", year:"1989"})
-CREATE (m4) -[:USES]->(s)
-CREATE (s) -[:USED_IN]->(m5:MOVIE {title:"Forrest Gump", year:"1994"})
-CREATE (m5) -[:USES]->(s)
-CREATE (s) -[:USED_IN]->(e:SERIES {title:"Battlestar Galactica", year:"2004-2009"})
-CREATE (e) -[:USES]->(s)
 
-CREATE(s1:SONG {name:"Gimme Shelter", pubDate:"1969"})
-CREATE (s1) -[:IS_ON]-> (a1:ALBUM {name: "Let It Bleed", pubDate:"1969-01-01"})
-CREATE (a1) -[:CONTAINS]-> (s1)
-CREATE (a1) -[:IS_FROM]-> (b1:BAND {name:"The Rolling Stones"})
-CREATE (m6:MOVIE {title:"Casino", year:"1995"})
-CREATE (s1) -[:USED_IN]->(m6)
-CREATE (m6) -[:USES]->(s1)
-CREATE (m7:MOVIE {title:"The Departed", germanTitle:"Departed - Unter Feinden", year:"2006"})
-CREATE (s1) -[:USED_IN]->(m7)
-CREATE (m7) -[:USES]->(s1)
-CREATE (e2:SERIES {title:"Dexter", year:"2006-2013"})
-CREATE (s1) -[:USED_IN]->(e2)
-CREATE (e2) -[:USES]->(s1)
-CREATE (m8:MOVIE {title:"Layer Cake", year:"2006"})
-CREATE (s1) -[:USED_IN]->(m8)
-CREATE (m8) -[:USES]->(s1)
-CREATE (m9:MOVIE {title:"GoodFellas", year:"1990"})
-CREATE (s1) -[:USED_IN]->(m9)
-CREATE (m9) -[:USES]->(s1)
-// Show some data
-MATCH (get) RETURN get
+// Import Band
+LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/band.csv" AS line 
+WITH line
+MERGE(b:BAND {name:line.name})
+SET b.id = TOINT(line.id)
+
+// Import Albums
+LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/album.csv" AS line 
+WITH line
+MERGE(a:ALBUM {name:line.name})
+SET a.id = TOINT(line.id)
+SET a.pubDate = line.pubDate
+MERGE(b:BAND {id: TOINT(line.bandId)})
+CREATE (a)-[:IS_FROM]->(b)
+
+
+// IMPORT SONGS
+LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/songs.csv" AS line 
+WITH line
+MERGE(s:SONG {name:line.name})
+SET s.id = TOINT(line.id)
+SET s.pubDate = line.pubDate
+MERGE (a:ALBUM {id:TOINT(line.albumId)})
+CREATE (a)-[:CONTAINS]->(s)
+CREATE (s) -[:IS_FROM]-> (a)
+
+// IMPRT MOVIES
+LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/movie.csv" AS line 
+MERGE(m:MOVIE {title:line.title})
+SET m.id = TOINT(line.id)
+SET m.germanTitle = line.germanTitle
+SET m.year = TOINT(line.year)
+MERGE(s:SONG {id:TOINT(line.song)})
+CREATE(m) -[:USES]->	(s)
+CREATE(s) -[:USED_IN]->(m)
