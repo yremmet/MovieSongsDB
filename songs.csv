@@ -1,2 +1,3 @@
-songID:id(SONG),name,pubDate
-10001,Walking on Sunshone,1985-01-01
+id,name,pubDate,albumId
+1,Walking on Sunshine,1985-01-01,1
+2,Bad to the Bone,1982-01-01,2
