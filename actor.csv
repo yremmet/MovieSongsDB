@@ -1,48 +1,200 @@
-id,name,birthday,movie,rolename
-1,John Cusack,,1,Rob Gordon
-2,Iben Hjejle,,1,Laura
-3,Todd Louiso,,1,Dick
-4,Lisa Bonet,,1,Marie de Salle
-5,Cathrine Zeta-Jones,,1,Charlie Nicho
-1,Joan Cusack,,1,Liz
-6,Tim Robbins,,1,Ian Raymond
-7,Chris Rehmann,,1,Vince
-8,Ben Carr,,1,Justin
-9,Lili Taylor,,1,Sarah Kendrew
-10,Joelle Carter,,1,Penny Hardwick
-11,Natasha Gregson Wagner,,1,Caroline
-12,Micheal J. Fox,,2,Brantley Foster
-13,Helen Slater,,2,Christy Wills
-14,Richard Jordan,,2,Howard Prescott
-15,Margaret Whitton,,2,Vera Prescott
-16,John Pankow,,2,Fred Melrose
-17,Christopher Murney,,2,Barney Rattigan
-18,Gerry Bamman,,2,Art Thomas
-19,Fred Gwynne,,2,Donald Davenport
-20,Carol Ann Susi,,2,Jean
-21,Elizabeth Franz,,2,Grace Foster
-22,Cindy Crawford,,2,Cindy Crawford
-23, Mercedes Ruehl,,2,Sheila
-24,Bruce McGill,,2,Angestellter
-25,John Travolta,,4,James Ubriacco
-26,Kristie Alley,,4,Mollie
-27,George Segal,,4,Albert
-28,Olympia Dukakis,,4,Rosie
-29,Twink Caplan,,4,Rona
-30,Joy Boushel,,4,Melissa
-31,Abe Vigoda,,4,Grandpa
-32,Bruce Willis,,4,Mikey
-33,Joan Rivers,,4,Julie
-34,Christian Bale,,5,Patrick Bateman
-35,Justin Theroux,,5,Timothy Bryce
-36,Josh Lucas,,5,Craig McDermott
-37,Bill Sage,,5,David Vat Patten
-38,Chloë Sevigny,,5,Jean
-39,Reese Witherspoon,,5,Evelyn Williams
-40,Samantha Mathis,,5,Courtney Rawlinson
-41,Matt Ross,,5,Louis Carruthers
-42,Jared Leto,,5,Paul Allen
-43,Willem Dafoe,,5,Det. Donald Kimbal
-44,Cara Seymour,,5,Christine
-45,Guinevere Turner,,5,Elizabeth
-46,Krista Sutton,,5,Sabrina
+id,name,birthday,movie,rolename,
+1,John Cusack,,1,Rob Gordon,
+2,Iben Hjejle,,1,Laura,
+3,Todd Louiso,,1,Dick,
+4,Lisa Bonet,,1,Marie de Salle,
+5,Cathrine Zeta-Jones,,1,Charlie Nicho,
+1,Joan Cusack,,1,Liz,
+6,Tim Robbins,,1,Ian Raymond,
+7,Chris Rehmann,,1,Vince,
+8,Ben Carr,,1,Justin,
+9,Lili Taylor,,1,Sarah Kendrew,
+10,Joelle Carter,,1,Penny Hardwick,
+11,Natasha Gregson Wagner,,1,Caroline,
+12,Micheal J. Fox,,2,Brantley Foster,
+13,Helen Slater,,2,Christy Wills,
+14,Richard Jordan,,2,Howard Prescott,
+15,Margaret Whitton,,2,Vera Prescott,
+16,John Pankow,,2,Fred Melrose,
+17,Christopher Murney,,2,Barney Rattigan,
+18,Gerry Bamman,,2,Art Thomas,
+19,Fred Gwynne,,2,Donald Davenport,
+20,Carol Ann Susi,,2,Jean,
+21,Elizabeth Franz,,2,Grace Foster,
+22,Cindy Crawford,,2,Cindy Crawford,
+23, Mercedes Ruehl,,2,Sheila,
+24,Bruce McGill,,2,Angestellter,
+25,John Travolta,,4,James Ubriacco,
+26,Kristie Alley,,4,Mollie,
+27,George Segal,,4,Albert,
+28,Olympia Dukakis,,4,Rosie,
+29,Twink Caplan,,4,Rona,
+30,Joy Boushel,,4,Melissa,
+31,Abe Vigoda,,4,Grandpa,
+32,Bruce Willis,,4,Mikey,
+33,Joan Rivers,,4,Julie,
+34,Christian Bale,,5,Patrick Bateman,
+35,Justin Theroux,,5,Timothy Bryce,
+36,Josh Lucas,,5,Craig McDermott,
+37,Bill Sage,,5,David Vat Patten,
+38,Chloë Sevigny,,5,Jean,
+39,Reese Witherspoon,,5,Evelyn Williams,
+40,Samantha Mathis,,5,Courtney Rawlinson,
+41,Matt Ross,,5,Louis Carruthers,
+42,Jared Leto,,5,Paul Allen,
+43,Willem Dafoe,,5,Det. Donald Kimbal,
+44,Cara Seymour,,5,Christine,
+45,Guinevere Turner,,5,Elizabeth,
+46,Krista Sutton,,5,Sabrina,
+47,Harvey Keitel,,39, Mr. White/Larry Dimmick,
+48,Tim Roth,,39, Mr. Orange/Freddy Newendyke,
+49,Michael Madsen,,39, Mr. Blonde/Vic Vega,
+50,Steve Buscemi,,39, Mr. Pink,
+51,Edward Bunker,,39, Mr. Blue,
+52,Chris Penn,,39, Nice Guy Eddie,
+53,Quentin Tarantino,,39, Mr. Brown,
+54,Lawrence Tierney,,39, Joe Cabot,
+55,Kirk Baltz,,39, Marvin Nash, Polizist
+56,Steven Wright,,39, K-Billy DJ (Stimme),
+57,Lawrence Bender,,39, Junger Polizist,
+58,John Travolta,,38, Vincent Vega,
+59,Samuel L. Jackson,,38, Jules Winnfield,
+60,Uma Thurman,,38, Mia Wallace,
+61,Bruce Willis,,38, Butch Coolidge,
+62,Harvey Keitel,,38, Winston Wolf,
+63,Maria de Medeiros,,38, Fabienne,
+64,Ving Rhames,,38, Marsellus Wallace,
+65,Tim Roth,,38, Pumpkin,
+66,Amanda Plummer,,38, Honey Bunny (Yolanda),
+67,Eric Stoltz,,38, Lance,
+68,Quentin Tarantino,,38, Jimmie,
+69,Christopher Walken,,38, Cpt. Koons,
+70,Rosanna Arquette,,38, Jody,
+71,Peter Greene,,38, Zed,
+72,Frank Whaley,,38, Brett,
+73,Phil LaMarr,,38, Marvin,
+74,Alexis Arquette,,38, Mann 4,
+75,Steve Buscemi,,38, Buddy Holly,
+76,Lawrence Bender,,38, Long Hair Yuppie Scum,
+77,Angela Jones,,38, Esmeralda Villalobos,
+78,Julia Sweeney,,38, Raquel,
+79,Paul Calderón,,38, Paul,
+80,Leonardo DiCaprio,,37,"William ""Billy"" Costigan", Jr.
+81,Matt Damon,,37,Staff Sgt. Colin Sullivan,
+82,Jack Nicholson,,37,"Francis ""Frank"" Costello",
+83,Mark Wahlberg,,37,Staff Sgt. Sean Dignam,
+84,Martin Sheen,,37,Capt. Oliver Charles Queenan,
+85,Vera Farmiga,,37,Dr. Madolyn Madden,
+86,Ray Winstone,,37,"Arnold ""Frenchy"" French",
+87,Alec Baldwin,,37,Capt. George Ellerby,
+88,Anthony Anderson,,37,Trooper Brown,
+89,James Badge Dale,,37,Trooper Barrigan,
+90,David O'Hara,,37,Fitzy Fitzgibbons,
+91,Mark Rolston,,37,Timothy Delahunt,
+92,Kevin Corrigan,,37,Sean Costigan,
+93,John Cenatiempo,,37,Mark Brambilla,
+94,Armen Garo,,37,Eugene Fratti,
+95,Robert Wahlberg,,37,FBI Special Agent Frank Lazio,
+96,Kristen Dalton,,37,Gwen Costello,
+97,Conor Donovan,,37,young Colin Sullivan,
+98,Jake Gyllenhaal,,36,Donnie Darko,
+99,Jena Malone,,36,Gretchen Ross,
+100,Mary McDonnell,,36,Rose Darko,
+101,Holmes Osborne,,36,Eddie Darko,
+102,James Duval,,36,Frank,
+103,Patrick Swayze,,36,Jim Cunningham,
+104,Ashley Tisdale,,36,Kim,
+105,Katharine Ross,,36,Dr. Lilian Thurman,
+106,Drew Barrymore,,36,Karen Pomeroy,
+107,Beth Grant,,36,Kitty Farmer,
+108,Maggie Gyllenhaal,,36,Elizabeth Darko,
+109,Daveigh Chase,,36,Samantha Darko,
+110,Noah Wyle,,36,Dr. Kenneth Monnitoff,
+111,Patience Cleveland,,36,Roberta Sparrow,
+112,Alex Greenwald,,36,Seth Devlin,
+113,Jolene Purdy,,36,Cherita Chen,
+114,David Moreland,,36,Lary Cole,
+115,Arthur Taxier,,36,Dr. Don Fisher,
+116,David St. James,,36,Bob Garland,
+117,Stuart Stone,,36,Ronald Fisher,
+118,Gary Lundy,,36,Sean Smith,
+119,Seth Rogen,,36,Ricky Danforth,
+120,Scotty Leavenworth,,36,Davi,
+121,Edward Norton,,35,Protagonist/Erzähler,
+122,Brad Pitt,,35,Tyler Durden,
+123,Helena Bonham Carter,,35,Marla Singer,
+124,Meat Loaf,,35,Robert „Bob“ Paulson,
+125,Zach Grenier,,35,Richard Chesler,
+126,Jared Leto,,35,Angel Face,
+127,David Andrews,,35,Thomas,
+128,Bob Stephenson,,35,Flughafen-Sicherheitsbeamter,
+129,Holt McCallany,,35,The Mechanic,
+130,Eion Bailey,,35,Ricky,
+131,Matt Winston,,35,Priesterseminar-Student,
+132,Bruce Willis,,31, James Cole,
+133,Brad Pitt,,31, Jeffrey Goines,
+134,Madeleine Stowe,,31, Kathryn Railly,
+135,Christopher Plummer,,31, Dr. Goines,
+136,Jon Seda,,31, Jose,
+137,Vernon Campbell,,31, Tiny,
+138,Joseph Melito,,31, junger Cole,
+139,David Morse,,31, Dr. Peters,
+140,Simon Jones,,31, Zoologe,
+141,Frank Gorshin,,31, Dr. Fletcher,
+142,Lisa Gay Hamilton,,31, Teddy,
+143,Christopher Meloni,,31, Lt. Halperin,
+144,Annie Golden,,31, Taxifahrerin,
+145,Richard Stanley,,31, Mann im Transitaufenthaltsraum,
+146,Irma St. Paule,,31, Dichterin,
+147,Matt Ross,,31, Bee,
+148,David Spade,,8, Joe Dirt,
+149,Brittany Daniel,,8, Brandy,
+150,Dennis Miller,,8, Zander Kelly,
+151,Adam Beach,,8, Kicking Wing,
+152,Christopher Walken,,8, Clem,
+153,Jaime Pressly,,8, Jill,
+154,Kid Rock,,8, Robby,
+155,Erik Per Sullivan,,8, Kleiner Joe Dirt,
+156,Megan Taylor Harvey,,8, Joes kleine Schwester,
+157,Caroline Aaron,,8, Joes Mutter,
+158,Fred Ward,,8, Joes Vater,
+159,John Farley,,8, KXLA Security Guard,
+160,Reese Witherspoon,,13, Melanie Carmichael (Melanie Smooter Perry),
+161,Josh Lucas,,13, Jake Perry,
+162,Patrick Dempsey,,13, Andrew Hennings,
+163,Candice Bergen,,13, Bürgermeisterin Kate Hennings,
+164,Mary Kay Place,,13, Pearl Smooter,
+165,Fred Ward,,13, Earl Smooter,
+166,Melanie Lynskey,,13, Lurlynn,
+167,Mary Lynn Rajskub,,13, Dorothea,
+168,Kevin Sussman,,13, Barry Lowenstein,
+169,Jean Smart,,13, Stella Kay Perry,
+170,Rhona Mitra,,13, Tabatha,
+171,Steve Martin,,19,Bobby Bowfinger,
+172,Eddie Murphy,,19,Kit Ramsey/Jiffernson „Jiff“ Ramsey,
+173,Heather Graham,,19,Daisy,
+174,Christine Baranski,,19,Carol,
+175,Jamie Kennedy,,19,Dave,
+176,Kohl Sudduth,,19,Slater,
+177,Barry Newman,,19,Hal, Kits Agent
+178,Terence Stamp,,19,Terry Stricter,
+179,Robert Downey Jr.,,19,Jerry Renfro,
+180,John Cho,,32, Harold Lee,
+181,Kal Penn,,32, Kumar Patel,
+182,Rob Corddry,,32, Ron Fox,
+183,Jack Conley,,32, Deputy Frye,
+184,Roger Bart,,32, Dr. Jack Beecher,
+185,Neil Patrick Harris,,32, Neil Patrick Harris,
+186,Danneel Ackles,,32, Vanessa Fanning,
+187,Eric Winter,,32, Colton Graham,
+188,Paula Garcés,,32, Maria,
+189,Jon Reep,,32, Raymus,
+190,Missi Pyle,,32, Raylene,
+191,Mark Munoz,,32, Cyrus,
+192,James Adomian,,32, George W. Bush,
+193,Beverly D’Angelo,,32, Sally,
+194,Echo Valley,,32, Tits Hemingway,
+195,Christopher Meloni,,32, Großmeister des Ku-Klux-Klan,
+196,David Krumholtz,,32, Goldstein,
+197,Eddie Kaye Thomas,,32, Rosenberg,
+198,Ed Helms,,32, Übersetzer,

@@ -42,8 +42,8 @@ SET m.id = TOINT(line.id)
 SET m.germanTitle = line.germanTitle
 SET m.year = TOINT(line.year)
 MERGE(s:Song {id:TOINT(line.song)})
-CREATE(m) -[:USES]->	(s)
-CREATE(s) -[:USED_IN]->(m);
+CREATE (m) -[:USES]->	(s)
+CREATE (s) -[:USED_IN]->(m);
 
 // IMPORT ACTORS
 LOAD CSV WITH HEADERS FROM "https://github.com/yremmet/MovieSongsDB/raw/master/actor.csv" AS line 
