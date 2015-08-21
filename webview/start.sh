@@ -1,0 +1,1 @@
+NEO4J_USERNAME=username NEO4J_PASSWORD=password bundle exec rackup config.ru
